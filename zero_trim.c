@@ -31,6 +31,39 @@ void left_zero_trim(int grid[4][4])
     }
 }
 
+void up_zero_trim(int grid[4][4])
+{
+    int tempI = 0;
+    int tryCount = 0;
+
+    for (int j = 3; j >= 0; j--)
+    {
+        for (int i = 0; i < 4; i++)
+        {
+            if (grid[i][j] == 0)
+            {
+                tempI = i;
+                while (tempI < 3)
+                {
+                    grid[tempI][j] = grid[tempI + 1][j];
+                    if (tempI == 2)
+                    {
+                        grid[tempI + 1][j] = 0;
+                    }
+
+                    tempI++;
+                }
+                if (tryCount < 3)
+                {
+                    i = -1;
+                    tryCount++;
+                }
+            }
+        }
+        tryCount = 0;
+    }
+}
+
 void right_zero_trim(int grid[4][4])
 {
     int tempJ = 0;

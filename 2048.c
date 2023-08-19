@@ -49,6 +49,10 @@ int main()
         left_tile_merge(grid);
         break;
 
+    case 1:
+        up_zero_trim(grid);
+        break;
+
     case 2:
         right_zero_trim(grid);
         // right_tile_merge(grid);
