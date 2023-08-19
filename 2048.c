@@ -3,6 +3,7 @@
 #include <string.h>
 #include "2048.h"
 #include "zero_trim.h"
+#include "tile_merge.h"
 
 int main()
 {
@@ -45,6 +46,7 @@ int main()
     {
     case 0:
         left_zero_trim(grid);
+        left_tile_merge(grid);
         break;
 
     default:

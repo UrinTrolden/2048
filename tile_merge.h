@@ -1,0 +1,1 @@
+void left_tile_merge(int grid[4][4]);
