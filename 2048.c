@@ -54,6 +54,11 @@ int main()
         // right_tile_merge(grid);
         break;
 
+    case 3:
+        down_zero_trim(grid);
+
+        break;
+
     default:
         break;
     }

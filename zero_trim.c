@@ -88,7 +88,7 @@ void down_zero_trim(int grid[4][4])
                 }
                 if (tryCount < 3)
                 {
-                    i = 3;
+                    i = 4;
                     tryCount++;
                 }
             }
