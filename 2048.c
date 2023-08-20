@@ -10,7 +10,10 @@ int main()
     char input[100];
     int grid[4][4];
 
-    fgets(input, sizeof(input), stdin);
+    if (fgets(input, sizeof(input), stdin) == NULL)
+    {
+        printf("EOF Error\n");
+    }
 
     int tokenCount = 0;
     int rowCount = 0;

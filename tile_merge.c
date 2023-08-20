@@ -10,10 +10,18 @@ void left_tile_merge(int grid[4][4])
             {
                 tempJ = j;
                 grid[i][j] *= 2;
-                while (tempJ < 2)
+                while (tempJ < 3)
                 {
-                    grid[i][tempJ + 1] = grid[i][tempJ + 2];
-                    grid[i][tempJ + 2] = 0;
+                    if (tempJ == 2)
+                    {
+                        grid[i][tempJ + 1] = 0;
+                    }
+                    else
+                    {
+                        grid[i][tempJ + 1] = grid[i][tempJ + 2];
+                        grid[i][tempJ + 2] = 0;
+                    }
+
                     tempJ++;
                 }
             }
@@ -33,10 +41,17 @@ void up_tile_merge(int grid[4][4])
             {
                 tempI = i;
                 grid[i][j] *= 2;
-                while (tempI < 2)
+                while (tempI < 3)
                 {
-                    grid[tempI + 1][j] = grid[tempI + 2][j];
-                    grid[tempI + 2][j] = 0;
+                    if (tempI == 2)
+                    {
+                        grid[tempI + 1][j] = 0;
+                    }
+                    else
+                    {
+                        grid[tempI + 1][j] = grid[tempI + 2][j];
+                        grid[tempI + 2][j] = 0;
+                    }
                     tempI++;
                 }
             }
@@ -86,10 +101,17 @@ void down_tile_merge(int grid[4][4])
             {
                 tempI = i;
                 grid[i][j] *= 2;
-                while (tempI > 1)
+                while (tempI > 0)
                 {
-                    grid[tempI - 1][j] = grid[tempI - 2][j];
-                    grid[tempI - 2][j] = 0;
+                    if (tempI == 1)
+                    {
+                        grid[tempI - 1][j] = 0;
+                    }
+                    else
+                    {
+                        grid[tempI - 1][j] = grid[tempI - 2][j];
+                        grid[tempI - 2][j] = 0;
+                    }
                     tempI--;
                 }
             }
