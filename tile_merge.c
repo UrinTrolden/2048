@@ -34,7 +34,7 @@ void right_tile_merge(int grid[4][4])
 
     for (int i = 0; i < 4; i++)
     {
-        for (int j = 3; j >= 0; j--)
+        for (int j = 3; j >= 1; j--)
         {
             if ((grid[i][j] == grid[i][j - 1]) && (grid[i][j] != 0))
             {
