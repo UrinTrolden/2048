@@ -66,3 +66,26 @@ void right_tile_merge(int grid[4][4])
         }
     }
 }
+
+void down_tile_merge(int grid[4][4])
+{
+    int tempI = 0;
+
+    for (int j = 3; j >= 0; j--)
+    {
+        for (int i = 3; i >= 0; i--)
+        {
+            if ((grid[i][j] == grid[i - 1][j]) && (grid[i][j] != 0))
+            {
+                tempI = i;
+                grid[i][j] *= 2;
+                while (tempI > 1)
+                {
+                    grid[tempI - 1][j] = grid[tempI - 2][j];
+                    grid[tempI - 2][j] = 0;
+                    tempI--;
+                }
+            }
+        }
+    }
+}

@@ -61,7 +61,7 @@ int main()
 
     case 3:
         down_zero_trim(grid);
-
+        down_tile_merge(grid);
         break;
 
     default:
