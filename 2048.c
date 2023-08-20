@@ -51,7 +51,7 @@ int main()
 
     case 1:
         up_zero_trim(grid);
-
+        up_tile_merge(grid);
         break;
 
     case 2:
