@@ -56,10 +56,17 @@ void right_tile_merge(int grid[4][4])
             {
                 tempJ = j;
                 grid[i][j] *= 2;
-                while (tempJ > 1)
+                while (tempJ > 0)
                 {
-                    grid[i][tempJ - 1] = grid[i][tempJ - 2];
-                    grid[i][tempJ - 2] = 0;
+                    if (tempJ == 1)
+                    {
+                        grid[i][tempJ - 1] = 0;
+                    }
+                    else
+                    {
+                        grid[i][tempJ - 1] = grid[i][tempJ - 2];
+                        grid[i][tempJ - 2] = 0;
+                    }
                     tempJ--;
                 }
             }

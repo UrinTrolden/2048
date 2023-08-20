@@ -31,16 +31,6 @@ int main()
 
     // 0 = left, 1 = up, 2 = right, 3 = down.
     int inputDirection = atoi(input);
-    printf("inputDirection: %d \n", inputDirection);
-
-    for (int i = 0; i < 4; i++)
-    {
-        for (int j = 0; j < 4; j++)
-        {
-            printf("%d ", grid[i][j]);
-        }
-        printf("\n");
-    }
 
     switch (inputDirection)
     {
@@ -68,7 +58,7 @@ int main()
         break;
     }
 
-    printf("Final print:\n");
+    // printf("Final print:\n");
 
     for (int i = 0; i < 4; i++)
     {
